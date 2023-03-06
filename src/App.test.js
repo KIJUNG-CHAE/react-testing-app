@@ -16,4 +16,11 @@ test("renders learn react link", () => {
   // get은 요소가 있는지 없는지 체크,
   // query는 promise를 반환,
   // find는 요소 유무 체크 후 값을 반환, getBy+waitFor(비동기 처리)
+
+  const lintTest = screen.getByRole("button", {
+    name: "lintTest",
+  });
+
+  expect(lintTest.testContent).toBe("lintTest");
+  expect(lintTest).toHaveTextContent("lintTest");
 });
